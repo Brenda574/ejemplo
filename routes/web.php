@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\SistemaController;
 use App\Http\Controllers\IdiomaController;
+use App\Http\Controllers\PaqueteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,7 @@ Route::get('/saludar',[IdiomaController::class, 'saludar']) -> name('saludar');
 Route::get('/despedir',[IdiomaController::class, 'despedir'])->name('despedir');
 
 Route::get('login',[SistemaController::class,'entrada']);
+Route::get('paquete',[PaqueteController::class, 'index']);
 
 /*
 Route::post('procesar', function (Request $lenguaje) {
